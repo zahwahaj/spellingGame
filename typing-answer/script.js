@@ -1,13 +1,15 @@
-
 var imported = document.createElement('script')
 imported.src = 'words.js'
 document.head.appendChild(imported)
 
-function randomWord()
-{
-    var lenWordsArr = words.length-1;
+var foo = new p5.Speech();
+
+function randomWord() {
+    console.log("go")
+    var lenWordsArr = words.length - 1;
     var randW = Math.floor(Math.random() * lenWordsArr) + 1
     console.log(words[randW])
+    foo.speak(words[randW])
     return words[randW]
 }
 

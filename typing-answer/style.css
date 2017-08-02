@@ -1,4 +1,53 @@
-#mainEverything{
-    min-height:800px;
-    background: url('https://p11cdn4static.sharpschool.com/UserFiles/Servers/Server_131303/Image/News%20images/News%20image%20clipart/spelling-bee-BANNER2.png');
+.jumbotron {
+    background-repeat: no-repeat !important;
+    background-size: 50% !important;
+    height: 800pt;
+    background-position: left !important;
+    background: #6DB3F2 url("https://clipartion.com/wp-content/uploads/2015/11/spelling-bee-clip-art-830x508.png");
+    border-style: solid;
+    border-width:50px;
+    border-color:black;
+}
+
+
+#description {
+    position: absolute;
+    left: 2550px;
+    top: 550px;
+    color:lightBlue;
+    font-size: 100px;
+    font-family: 'Abril Fatface', cursive;
+
+}
+
+#title {
+    position: absolute;
+    left: 2475px;
+    top: 300px;
+    color:gold;
+    font-size: 200px;
+    font-family: 'Abril Fatface', cursive;
+
+}
+
+#input{
+    width:50%;
+    margin-left:25%;
+    font-size:80px;
+    font-family: 'Abril Fatface', cursive;
+    height:100px;
+}
+
+#repeatWord{
+    width:10%;
+    margin-left:45%;
+    margin-top:40px;
+    border-style:none;
+    font-family: 'Abril Fatface', cursive;
+    background-color:lightBlue;
+    font-size:50px;
+}
+
+#body{
+    background-color:lightyellow;
 }

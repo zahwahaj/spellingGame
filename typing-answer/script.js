@@ -3,16 +3,26 @@ imported.src = 'words.js'
 document.head.appendChild(imported)
 
 var foo = new p5.Speech();
+var randW;
 
 function randomWord() {
     console.log("go")
     var lenWordsArr = words.length - 1;
-    var randW = Math.floor(Math.random() * lenWordsArr) + 1
+    randW = Math.floor(Math.random() * lenWordsArr) + 1
     console.log(words[randW])
     foo.speak(words[randW])
+    foo.onStart = hit()
     return words[randW]
 }
 
+function hit(){
+    console.log("started")
+}
+
+function repeat()
+{
+    foo.speak(words[randW])
+}
 // have the string get one of the random words from the program
 var string = randomWord()
 

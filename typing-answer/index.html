@@ -20,18 +20,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="p5.speech.js"></script>
     
-    <script onClick="randomWord()" src="words.js"></script>
+    <script onClick="randomWord(); checkLetterSpeech()" src="words.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body id="body">
     <div class="jumbotron" id="mainEverything">
-        <h1 id="title">SPELL IT OUT</h1>
+        <h1 id="title">BUZZ WORDS</h1>
         <h2 id=description>SPELL WHAT YOU HEAR</h2>
     </div>
+    <button onClick="repeat()" id="repeatWord" class="button">Repeat the Word</button>
     <input type="text" id="input" onkeyup="submitLetter()">
     <h1 id="word"></h1>
-    <button onClick="repeat()" id="repeatWord">Repeat the Word</button>
 </body>
 
 </html>

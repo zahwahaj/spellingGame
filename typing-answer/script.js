@@ -48,7 +48,7 @@ function hit() {
 
 function repeat() {
     foo.setRate(.4)
-    foo.speak(word)
+    foo.speak(string)
 }
 // have the string get one of the random words from the program
 var string = randomWord().toLowerCase()

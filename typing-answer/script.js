@@ -65,17 +65,19 @@ function submitLetter() {
     // have the computer read the letter that the user typed in
     var chosenLetter = document.getElementById("input").value
     console.log(chosenLetter)
+
+    // a place to put everything will appear
+    var trial = document.createElement("div")
+    trial.setAttribute("id", "trial")
+    document.body.appendChild(trial)
+
     if (chosenLetter == string[letter]) {
         // when the user types the correct letter
         // the letter will disappear and the user is free to sumbit a new letter
         document.getElementById("input").value = "";
 
-        // a place to put everything will appear
-        var trial = document.createElement("div")
-        trial.setAttribute("id", "trial")
-        document.body.appendChild(trial)
-
         // have the computer display the letter that the user typed in
+        var trial = document.getElementById('trial')
         var header = document.getElementById("word")
         var text = document.createTextNode(chosenLetter);
         header.style.fontSize = "60px";
@@ -83,7 +85,7 @@ function submitLetter() {
         header.style.textAlign = "center"
         header.style.marginTop = "50px"
         header.appendChild(text);
-        trial.appendChild(header)
+        trial.appendChild(header);
 
 
         // check to see if this is the end of the word & you have finished spelling it correctly
@@ -91,9 +93,7 @@ function submitLetter() {
             // stop the user from typing more
             document.getElementById('input').disabled = true;
 
-            var trial = document.createElement("div")
-            trial.setAttribute("id", "trial")
-            document.body.appendChild(trial)
+            var trial = document.getElementById('trial')
 
             // prints a congrats message on the screen
             var header2 = document.createElement("H2")
@@ -138,9 +138,7 @@ function submitLetter() {
         
 
         // a place to put everything will appear
-        var trial = document.createElement("div")
-        trial.setAttribute("id", "trial")
-        document.body.appendChild(trial)
+        var trial = document.getElementById('trial')
 
         // the correctly spelled "real" world will appear on the screen
         var header3 = document.createElement("H3")
@@ -195,7 +193,8 @@ function newTry() {
 
 function checkLetterSpeech() {
     console.log("this is what you said " + myRec.resultString)
-    console.log("this is the index of the letter " + word[ticker+1]) //added + 1
+    console.log("this is the index of the letter " + string[ticker])
+     //added + 1
     if (myRec.resultString == "hey") {
         myRec.resultString = "a"
     }
@@ -254,7 +253,7 @@ function checkLetterSpeech() {
     if (myRec.resultString == "why") { myRec.resultString = "y" }
 
 
-    if (myRec.resultString == word[ticker]) {//.toLowerCase()
+    if (myRec.resultString == string[ticker]) {//.toLowerCase()
         ticker++
         //myRec.onResult = myRec.start()
         console.log(ticker)
@@ -275,7 +274,7 @@ function checkLetterSpeech() {
     //     }
 
     // }
-    if(ticker == word.length)
+    if(ticker == string.length)
     {
          // stop the user from typing more
             document.getElementById('input').disabled = true;

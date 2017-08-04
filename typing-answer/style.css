@@ -48,11 +48,37 @@
 }
 
 #repeatWord {
-    margin-right: 70px;
+    margin-right: 80px;
     margin-left: 45%;
  
 }
 
 #body {
     background-color: lightyellow;
+}
+
+#score{
+    position:absolute;
+    left:90%;
+    top:43.1%;
+    background-color: lightBlue;
+    min-height:15%;
+    width:12%;
+}
+
+#scoretitle{
+    font-family: 'Abril Fatface', cursive;
+    font-size:50px;
+    text-align:center !important;
+    position:absolute;
+    top:70%;
+    left:30%;
+}
+
+#actualscore{
+    font-family: 'Abril Fatface', cursive;
+    font-size:200px;
+    position:absolute;
+    top:5%;
+    left:22%;
 }
